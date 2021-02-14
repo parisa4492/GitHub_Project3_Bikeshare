@@ -1,0 +1,4 @@
+ignore_folder
+*.txt
+*.csv
+*.DS_Store
