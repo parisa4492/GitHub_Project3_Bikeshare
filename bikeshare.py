@@ -22,11 +22,12 @@ def get_filters():
     print('\nHello! Let\'s explore some US bikeshare data!\n')
     
     # Get user input for city (chicago, new york city, washington). HINT: Use a while loop to deal with invalid inputs
+
     city = input('Would you like to see data for Chicago, New York City, or Washington?\n').title()
     print('Your selected city was: ', city) 
     while city not in CITY_DATA.keys():
-            print('\nInvalid answer, please consider your spelling and try again by inputing either Chicago, New York City, or Washington')
-            city = input('Would you like to see data for Chicago, New York City, or Washington?\n').title()
+        print('\nInvalid answer, please consider your spelling and try again by inputing either Chicago, New York City, or Washington')
+        city = input('Would you like to see data for Chicago, New York City, or Washington?\n').title()
                  
     # Get user input for month (all, january, february, ... , june)  
     month = input('\nWhich month you would like to see the data (January, February, March, April, May, June or all)? Please type-out the full name of the month.\n').title()
@@ -39,8 +40,8 @@ def get_filters():
     day = input('\nWhich day you would like to see the data? please type a day: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday or all.\n').title()
     print('Your selected day was: ', day)
     while day not in DAYS_LIST:
-            print('\nInvalid answer, please consider your spelling and try again!')
-            day = input('Which day you would like to see the data? please type a day: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday or all.\n').title()      
+        print('\nInvalid answer, please consider your spelling and try again!')
+        day = input('Which day you would like to see the data? please type a day: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday or all.\n').title()      
         print('Your selected day was: ', day) 
 
                                
