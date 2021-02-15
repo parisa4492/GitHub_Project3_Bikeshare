@@ -22,39 +22,30 @@ def get_filters():
     print('\nHello! Let\'s explore some US bikeshare data!\n')
     
     # Get user input for city (chicago, new york city, washington). HINT: Use a while loop to deal with invalid inputs
-    while True:
+
+    city = input('Would you like to see data for Chicago, New York City, or Washington?\n').title()
+    print('Your selected city was: ', city) 
+    while city not in CITY_DATA.keys():
+        print('\nInvalid answer, please consider your spelling and try again by inputing either Chicago, New York City, or Washington')
         city = input('Would you like to see data for Chicago, New York City, or Washington?\n').title()
-        print('Your selected city was: ', city) 
-        if city not in CITY_DATA.keys():
-            print('\nInvalid answer, please consider your spelling and try again by inputing either Chicago, New York City, or Washington')
-            continue
-            city = input('Would you like to see data for Chicago, New York City, or Washington?\n').title()            
-        else:
-            break
                  
-        # Get user input for month (all, january, february, ... , june)  
-    while True: 
-        month = input('\nWhich month you would like to see the data (January, February, March, April, May, June or all)? Please type-out the full name of the month.\n').title()
-        print('Your selected month was: ', month)
-        if month not in MONTHS_LIST:
-            print('\nInvalid answer, please consider your spelling and try again!')
-            continue
-            month = input('Which month you would like to see the data (January, February, March, April, May, June or all)? Please type out the full name of th month.\n').title()
-        else:
-            break
+    # Get user input for month (all, january, february, ... , june)  
+    month = input('\nWhich month you would like to see the data (January, February, March, April, May, June or all)? Please type-out the full name of the month.\n').title()
+    print('Your selected month was: ', month)
+    while month not in MONTHS_LIST:
+        print('\nInvalid answer, please consider your spelling and try again!')
+        month = input('Which month you would like to see the data (January, February, March, April, May, June or all)? Please type out the full name of th month.\n').title()
  
     # Get user input for day of week (all, monday, tuesday, ... sunday)   
-    try:
-        day = input('\nWhich day you would like to see the data? please type a day: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday or all.\n').title()
-        while day not in DAYS_LIST:
-            print('\nInvalid answer, please consider your spelling and try again!')
-            day = input('Which day you would like to see the data? please type a day: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday or all.\n')      
+    day = input('\nWhich day you would like to see the data? please type a day: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday or all.\n').title()
+    print('Your selected day was: ', day)
+    while day not in DAYS_LIST:
+        print('\nInvalid answer, please consider your spelling and try again!')
+        day = input('Which day you would like to see the data? please type a day: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday or all.\n').title()      
         print('Your selected day was: ', day) 
-                         
-              
-        return city, month, day
-    except Exception as e:
-        print('An error has occured with your inputs: {}'.format(e))           
+
+                               
+    return city, month, day     
     print('-'*40)
     
 
