@@ -1,5 +1,5 @@
 # **Project 3: Python Script to Explore U.S. Bikeshare Data**
-This project uses Python to understand U.S. bikeshare data. For this project, statistics have been calculated and an interactive environment has been built, where a user has an option to select and filter for a dataset to analyse.
+This project uses Python to understand U.S. bikeshare data. For this project, I have computed descriptive statistics and built an interactive environment, where a user has an option to select and filter for a dataset to analyse.
 
 ## How To Run Script
 You can run the script using a Python integrated development environment (IDE) such as PyCharm. To install  PyCharm, you will need to download the Anaconda Navigator installer. This script is written in Python 3, therefore you will need the Python 3.x version of the installer. After downloading and installing Anaconda, you will be able to launch PyCharm. 
@@ -19,7 +19,6 @@ The Chicago and New York City files also have the following two columns:
 * Birth Year
 
 ## Statistics Computed
-
 In this project, the code is written to provide the following information:
 
 **1. Popular times of travel** (i.e., occurs most often in the start time)
@@ -40,3 +39,9 @@ In this project, the code is written to provide the following information:
 * counts of each user type
 * counts of each gender (only available for NYC and Chicago)
 * earliest, most recent, most common year of birth (only available for NYC and Chicago)
+
+## Files
+I used data provided by Motivate (a national bikeshare system provider). The following files are needed to run the program:
+* chicago.csv
+* new_york_city.csv
+* washington.csv
